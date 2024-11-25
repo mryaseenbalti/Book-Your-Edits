@@ -3,16 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBDR40tGTVSSa80u-JXCRcbQ-6iluAh7NA",
-  authDomain: "book-your-edits.firebaseapp.com",
-  projectId: "book-your-edits",
-  storageBucket: "book-your-edits.appspot.com",
-  messagingSenderId: "997165397656",
-  appId: "1:997165397656:web:57c952d1ecdd518fbd02ed",
-  measurementId: "G-1YCK3TZFP5",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); 
+const auth = getAuth(app);
 
 export { app, auth }; 
